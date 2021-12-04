@@ -1,0 +1,33 @@
+﻿<Window x:Class="LanacHotelaPresentation.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LanacHotelaPresentation"
+        xmlns:prop="clr-namespace:LanacHotelaPresentation.Properties" 
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="300"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
+    <Grid >
+        <Border x:Name="loginBorder" BorderThickness="3" BorderBrush="Gray" HorizontalAlignment="Left" Width="300" />
+
+        <Button Margin="250,15,24,410" Content="❌" Click="CloseClick">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Image Source="/Properties/Logo.png" Width="150" Height="150" Margin="75,24,75,276"/>
+        <TextBlock x:Name="loginUserText" Text="{x:Static prop:Resources.loginUserText}" Margin="36,215,125,194"/>
+        <TextBlock x:Name="loginPassText" Text="{x:Static prop:Resources.loginPassText}" Margin="36,266,150,160"/>
+        <TextBlock x:Name="loginLangText" Text="{x:Static prop:Resources.loginLangText}" Margin="36,316,150,110"/>
+
+        <TextBox x:Name="enteredUsername" Margin="101,210,24,210" FontSize="14" VerticalContentAlignment="Center" KeyDown="InputKey"/>
+        <PasswordBox x:Name="enteredPassword" Margin="101,258,24,160" FontSize="14" VerticalContentAlignment="Center" KeyDown="InputKey"/>
+        <ComboBox x:Name="languageSelector" VerticalContentAlignment="Center" Margin="101,311,24,110"/>
+
+        <Button x:Name="loginButtonText" Content="{x:Static prop:Resources.loginButtonText}" Margin="36,381,24,35" Click="LogIn"/>
+    </Grid>
+</Window>

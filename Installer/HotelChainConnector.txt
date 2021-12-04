@@ -1,0 +1,1 @@
+﻿server={SERVER}; database=LanacHotela; uid={USERNAME}; pwd={PASSWORD};

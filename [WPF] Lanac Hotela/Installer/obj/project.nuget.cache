@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VfuEjohhr7gCI9X3+WUCGNCuT/oaTqFf7kD+A2Zo+eKn4PXM17bCGbj9v9OuA+QmMHp80wofUEkRC0nq4owNTw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\njego\\Desktop\\HCI\\Projekat_B-IS za Lanac Hotela\\[WPF] Lanac Hotela\\Installer\\Installer.wapproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages\\microsoft.windows.sdk.buildtools\\10.0.19041.8\\microsoft.windows.sdk.buildtools.10.0.19041.8.nupkg.sha512"
+  ],
+  "logs": []
+}

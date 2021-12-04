@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Source>C:\Users\njego\Desktop\HCI\2. 1104_17-Njegos_Dukic-LanacHotela\[WPF] Lanac Hotela\LanacHotela\Properties\Logo.png</Source>
+    <SmallTileSource>C:\Users\njego\Desktop\HCI\2. 1104_17-Njegos_Dukic-LanacHotela\[WPF] Lanac Hotela\LanacHotela\Properties\Logo.png</SmallTileSource>
+    <MediumTileSource>C:\Users\njego\Desktop\HCI\2. 1104_17-Njegos_Dukic-LanacHotela\[WPF] Lanac Hotela\LanacHotela\Properties\Logo.png</MediumTileSource>
+    <WideTileSource>C:\Users\njego\Desktop\HCI\2. 1104_17-Njegos_Dukic-LanacHotela\[WPF] Lanac Hotela\LanacHotela\Properties\Logo.png</WideTileSource>
+    <LargeTileSource>C:\Users\njego\Desktop\HCI\2. 1104_17-Njegos_Dukic-LanacHotela\[WPF] Lanac Hotela\LanacHotela\Properties\Logo.png</LargeTileSource>
+    <AppIconSource>C:\Users\njego\Desktop\HCI\2. 1104_17-Njegos_Dukic-LanacHotela\[WPF] Lanac Hotela\LanacHotela\Properties\Logo.png</AppIconSource>
+    <SplashScreenSource>C:\Users\njego\Desktop\HCI\2. 1104_17-Njegos_Dukic-LanacHotela\[WPF] Lanac Hotela\LanacHotela\Properties\Logo.png</SplashScreenSource>
+    <BadgeLogoSource>C:\Users\njego\Desktop\HCI\2. 1104_17-Njegos_Dukic-LanacHotela\[WPF] Lanac Hotela\LanacHotela\Properties\Logo.png</BadgeLogoSource>
+    <PackageLogoSource>C:\Users\njego\Desktop\HCI\2. 1104_17-Njegos_Dukic-LanacHotela\[WPF] Lanac Hotela\LanacHotela\Properties\Logo.png</PackageLogoSource>
+    <UapAppxPackageBuildMode>SideloadOnly</UapAppxPackageBuildMode>
+    <AppxShowAllApps>False</AppxShowAllApps>
+    <AppxBuildConfigurationSelection>x64</AppxBuildConfigurationSelection>
+    <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
+  </PropertyGroup>
+</Project>

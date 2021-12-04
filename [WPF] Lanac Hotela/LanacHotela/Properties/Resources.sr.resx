@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="appTitle" xml:space="preserve">
+    <value>Lanac Hotela</value>
+  </data>
+  <data name="arragementCreated" xml:space="preserve">
+    <value>Aranžman kreiran.</value>
+  </data>
+  <data name="arrangementCancelled" xml:space="preserve">
+    <value>Otkazan</value>
+  </data>
+  <data name="arrangementCancelledInput" xml:space="preserve">
+    <value>Otkazan:</value>
+  </data>
+  <data name="arrangementDeleted" xml:space="preserve">
+    <value>Aranžman obrisan.</value>
+  </data>
+  <data name="arrangementEndInput" xml:space="preserve">
+    <value>Kraj:</value>
+  </data>
+  <data name="arrangementFinished" xml:space="preserve">
+    <value>Završen</value>
+  </data>
+  <data name="arrangementFinishedInput" xml:space="preserve">
+    <value>Završen:</value>
+  </data>
+  <data name="arrangementFrom" xml:space="preserve">
+    <value>Od</value>
+  </data>
+  <data name="arrangementGuestInput" xml:space="preserve">
+    <value>Gost:</value>
+  </data>
+  <data name="arrangementHotel" xml:space="preserve">
+    <value>Hotel</value>
+  </data>
+  <data name="arrangementHotelInput" xml:space="preserve">
+    <value>Hotel:</value>
+  </data>
+  <data name="arrangementName" xml:space="preserve">
+    <value>Ime</value>
+  </data>
+  <data name="arrangementNights" xml:space="preserve">
+    <value>Ukupno Noćenja</value>
+  </data>
+  <data name="arrangementPrice" xml:space="preserve">
+    <value>Cijena Noćenja</value>
+  </data>
+  <data name="arrangementRoomID" xml:space="preserve">
+    <value>Soba ID</value>
+  </data>
+  <data name="arrangementRoomInput" xml:space="preserve">
+    <value>Soba:</value>
+  </data>
+  <data name="arrangementStartInput" xml:space="preserve">
+    <value>Početak:</value>
+  </data>
+  <data name="arrangementSurname" xml:space="preserve">
+    <value>Prezime</value>
+  </data>
+  <data name="arrangementTo" xml:space="preserve">
+    <value>Do</value>
+  </data>
+  <data name="buttonAdd" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="buttonDelete" xml:space="preserve">
+    <value>Obriši</value>
+  </data>
+  <data name="buttonUpdate" xml:space="preserve">
+    <value>Ažuriraj</value>
+  </data>
+  <data name="contactContactID" xml:space="preserve">
+    <value>Kontakt ID</value>
+  </data>
+  <data name="contactCreated" xml:space="preserve">
+    <value>Kontakt kreiran.</value>
+  </data>
+  <data name="contactDeleted" xml:space="preserve">
+    <value>Kontakt obrisan.</value>
+  </data>
+  <data name="contactGuestID" xml:space="preserve">
+    <value>Gost ID</value>
+  </data>
+  <data name="contactHotelID" xml:space="preserve">
+    <value>Hotel ID</value>
+  </data>
+  <data name="contactInfo" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="contactInfoInput" xml:space="preserve">
+    <value>Info:</value>
+  </data>
+  <data name="contactType" xml:space="preserve">
+    <value>Tip</value>
+  </data>
+  <data name="contactTypeInput" xml:space="preserve">
+    <value>Tip:</value>
+  </data>
+  <data name="failedCreate" xml:space="preserve">
+    <value>Kreiranje neuspješno.</value>
+  </data>
+  <data name="failedDelete" xml:space="preserve">
+    <value>Brisanje neuspješno.</value>
+  </data>
+  <data name="fillAll" xml:space="preserve">
+    <value>Popunite sva polja.</value>
+  </data>
+  <data name="financialHotel" xml:space="preserve">
+    <value>Hotel</value>
+  </data>
+  <data name="financialTab" xml:space="preserve">
+    <value>Finansije</value>
+  </data>
+  <data name="financialTotalIncome" xml:space="preserve">
+    <value>Prihod</value>
+  </data>
+  <data name="financialTotalNights" xml:space="preserve">
+    <value>Ukupno Noćenja</value>
+  </data>
+  <data name="guestCreated" xml:space="preserve">
+    <value>Gost kreiran.</value>
+  </data>
+  <data name="guestDeleted" xml:space="preserve">
+    <value>Gost obrisan.</value>
+  </data>
+  <data name="guestHasArr" xml:space="preserve">
+    <value>Gost ima aranžmane.</value>
+  </data>
+  <data name="guestsGuestID" xml:space="preserve">
+    <value>Gost ID</value>
+  </data>
+  <data name="guestsJMBG" xml:space="preserve">
+    <value>JMBG</value>
+  </data>
+  <data name="guestsJMBGInput" xml:space="preserve">
+    <value>JMBG:</value>
+  </data>
+  <data name="guestsName" xml:space="preserve">
+    <value>Ime</value>
+  </data>
+  <data name="guestsNameInput" xml:space="preserve">
+    <value>Ime:</value>
+  </data>
+  <data name="guestsSurname" xml:space="preserve">
+    <value>Prezime</value>
+  </data>
+  <data name="guestsSurnameInput" xml:space="preserve">
+    <value>Prezime:</value>
+  </data>
+  <data name="guestsTab" xml:space="preserve">
+    <value>Gosti</value>
+  </data>
+  <data name="hotelCreated" xml:space="preserve">
+    <value>Hotel kreiran.</value>
+  </data>
+  <data name="hotelDeleted" xml:space="preserve">
+    <value>Hotel obrisan.</value>
+  </data>
+  <data name="hotelHasArrang" xml:space="preserve">
+    <value>Hotel ima aranžmane.</value>
+  </data>
+  <data name="hotelsCity" xml:space="preserve">
+    <value>Grad</value>
+  </data>
+  <data name="hotelsCityInput" xml:space="preserve">
+    <value>Grad:</value>
+  </data>
+  <data name="hotelsContactInput" xml:space="preserve">
+    <value>Kontakt:</value>
+  </data>
+  <data name="hotelsCountry" xml:space="preserve">
+    <value>Država</value>
+  </data>
+  <data name="hotelsCountryInput" xml:space="preserve">
+    <value>Država:</value>
+  </data>
+  <data name="hotelsHotel" xml:space="preserve">
+    <value>Hotel</value>
+  </data>
+  <data name="hotelsNameInput" xml:space="preserve">
+    <value>Ime:</value>
+  </data>
+  <data name="hotelsNumber" xml:space="preserve">
+    <value>Broj</value>
+  </data>
+  <data name="hotelsNumberInput" xml:space="preserve">
+    <value>Broj:</value>
+  </data>
+  <data name="hotelsStars" xml:space="preserve">
+    <value>Zvjezdice</value>
+  </data>
+  <data name="hotelsStarsInput" xml:space="preserve">
+    <value>Zvjezdice:</value>
+  </data>
+  <data name="hotelsStreet" xml:space="preserve">
+    <value>Ulica</value>
+  </data>
+  <data name="hotelsStreetInput" xml:space="preserve">
+    <value>Ulica:</value>
+  </data>
+  <data name="hotelsZIP" xml:space="preserve">
+    <value>ZIP</value>
+  </data>
+  <data name="hotelsZIPInput" xml:space="preserve">
+    <value>ZIP:</value>
+  </data>
+  <data name="loginButtonText" xml:space="preserve">
+    <value>Prijavi se</value>
+  </data>
+  <data name="loginLangText" xml:space="preserve">
+    <value>Jezik:</value>
+  </data>
+  <data name="loginPassText" xml:space="preserve">
+    <value>Lozinka:</value>
+  </data>
+  <data name="loginUserText" xml:space="preserve">
+    <value>Korisnik:</value>
+  </data>
+  <data name="logOutButtonText" xml:space="preserve">
+    <value>Odjavi se</value>
+  </data>
+  <data name="onlyContact" xml:space="preserve">
+    <value>Jedini kontakt.</value>
+  </data>
+  <data name="room" xml:space="preserve">
+    <value>Soba</value>
+  </data>
+  <data name="roomCreated" xml:space="preserve">
+    <value>Soba kreirana.</value>
+  </data>
+  <data name="roomDeleted" xml:space="preserve">
+    <value>Soba obrisana</value>
+  </data>
+  <data name="roomHasArr" xml:space="preserve">
+    <value>Soba ima aranžmane.</value>
+  </data>
+  <data name="roomsACInput" xml:space="preserve">
+    <value>Ima Klimu:</value>
+  </data>
+  <data name="roomsFloor" xml:space="preserve">
+    <value>Sprat</value>
+  </data>
+  <data name="roomsFloorInput" xml:space="preserve">
+    <value>Sprat:</value>
+  </data>
+  <data name="roomsHasAC" xml:space="preserve">
+    <value>Ima Klimu</value>
+  </data>
+  <data name="roomsHasACInput" xml:space="preserve">
+    <value>Ima Klimu:</value>
+  </data>
+  <data name="roomsHasTV" xml:space="preserve">
+    <value>Ima TV</value>
+  </data>
+  <data name="roomsHasTVInput" xml:space="preserve">
+    <value>Ima TV:</value>
+  </data>
+  <data name="roomsHotel" xml:space="preserve">
+    <value>Hotel</value>
+  </data>
+  <data name="roomsHotelInput" xml:space="preserve">
+    <value>Hotel:</value>
+  </data>
+  <data name="roomsNumberOfBeds" xml:space="preserve">
+    <value>Broj Kreveta</value>
+  </data>
+  <data name="roomsNumberOfBedsInput" xml:space="preserve">
+    <value>Broj Kreveta:</value>
+  </data>
+  <data name="roomsPrice" xml:space="preserve">
+    <value>Cijena Noćenja</value>
+  </data>
+  <data name="roomsPriceInput" xml:space="preserve">
+    <value>Cijena Noćenja:</value>
+  </data>
+  <data name="roomsRoomID" xml:space="preserve">
+    <value>ID Sobe</value>
+  </data>
+  <data name="roomsRoomNumber" xml:space="preserve">
+    <value>Broj Sobe</value>
+  </data>
+  <data name="roomsRoomNumberInput" xml:space="preserve">
+    <value>Soba:</value>
+  </data>
+  <data name="roomsTVInput" xml:space="preserve">
+    <value>Ima TV:</value>
+  </data>
+  <data name="selectArrangment" xml:space="preserve">
+    <value>Odaberite aranžman.</value>
+  </data>
+  <data name="selectContact" xml:space="preserve">
+    <value>Odaberite kontakt.</value>
+  </data>
+  <data name="selectGuest" xml:space="preserve">
+    <value>Odaberite gosta.</value>
+  </data>
+  <data name="selectHotel" xml:space="preserve">
+    <value>Odaberite hotel.</value>
+  </data>
+  <data name="selectRoom" xml:space="preserve">
+    <value>Odaberite sobu.</value>
+  </data>
+  <data name="selectZaposleni" xml:space="preserve">
+    <value>Odaberite zaposlenog.</value>
+  </data>
+  <data name="String1zaposleniPasswordInput" xml:space="preserve">
+    <value>Lozinka:</value>
+  </data>
+  <data name="tabArrangements" xml:space="preserve">
+    <value>Aranžmani</value>
+  </data>
+  <data name="tabContact" xml:space="preserve">
+    <value>Kontakti</value>
+  </data>
+  <data name="tabHotels" xml:space="preserve">
+    <value>Hoteli</value>
+  </data>
+  <data name="tabRooms" xml:space="preserve">
+    <value>Sobe</value>
+  </data>
+  <data name="updated" xml:space="preserve">
+    <value>Unosi ažurirani.</value>
+  </data>
+  <data name="zaposleniCreated" xml:space="preserve">
+    <value>Zaposleni kreiran.</value>
+  </data>
+  <data name="zaposleniDeleted" xml:space="preserve">
+    <value>Zaposleni obrisan.</value>
+  </data>
+  <data name="zaposleniIsManagerInput" xml:space="preserve">
+    <value>Menadžer:</value>
+  </data>
+  <data name="zaposleniJeMenadzer" xml:space="preserve">
+    <value>Menadžer</value>
+  </data>
+  <data name="zaposleniPassword" xml:space="preserve">
+    <value>Lozinka</value>
+  </data>
+  <data name="zaposleniPasswordInput" xml:space="preserve">
+    <value>Lozinka:</value>
+  </data>
+  <data name="zaposleniTab" xml:space="preserve">
+    <value>Zaposleni</value>
+  </data>
+  <data name="zaposleniUsername" xml:space="preserve">
+    <value>Korisničko ime</value>
+  </data>
+  <data name="zaposleniUsernameInput" xml:space="preserve">
+    <value>Korisničko ime:</value>
+  </data>
+</root>

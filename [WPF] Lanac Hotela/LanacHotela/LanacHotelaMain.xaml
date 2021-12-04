@@ -1,0 +1,243 @@
+﻿<Window x:Class="LanacHotela.LanacHotelaMain"
+        x:Name="MainWindowXAML"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LanacHotela" 
+        xmlns:prop="clr-namespace:LanacHotelaPresentation.Properties" 
+        mc:Ignorable="d"
+        Title = "{x:Static prop:Resources.appTitle}"
+        Height="450" Width="800"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" >
+    <Grid x:Name="grid">
+        <Border BorderThickness="3" BorderBrush="Gray" HorizontalAlignment="Left" Width="800"/>
+        
+        <Button Margin="745,15,30,410" Content="❌" Click="CloseClick">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        
+        <ScrollViewer Margin="30,30,550,119">
+            <StackPanel x:Name="stackPanel"/>
+        </ScrollViewer>
+        
+        <ComboBox x:Name="languageComboBox" Margin="30,353,550,70" VerticalContentAlignment="Center"/>
+
+        <TabControl Margin="280,30,30,30">
+            <TabItem x:Name="aranzmaniTab" Header="{x:Static prop:Resources.tabArrangements}">
+                <Grid>
+                    <DataGrid Name = "aranzmaniDataGrid" AlternatingRowBackground = "#e0f7fa"  
+                    AlternationCount = "2" AutoGenerateColumns = "False" Height="155" VerticalAlignment="Top">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn x:Name = "arrangementHotel" Header = "{x:Static prop:Resources.arrangementHotel}" IsReadOnly="True" Binding = "{Binding HotelIme}"/>
+                            <DataGridTextColumn x:Name = "arrangementName" Header = "{x:Static prop:Resources.arrangementName}" IsReadOnly="True" Binding = "{Binding GostIme}"/>
+                            <DataGridTextColumn x:Name = "arrangementSurname" Header = "{x:Static prop:Resources.arrangementSurname}" IsReadOnly="True" Binding = "{Binding GostPrezime}"/>
+                            <DataGridTextColumn x:Name = "arrangementFrom" Header = "{x:Static prop:Resources.arrangementFrom}" IsReadOnly="True" Binding = "{Binding Pocetak}"/>
+                            <DataGridTextColumn x:Name = "arrangementTo" Header = "{x:Static prop:Resources.arrangementTo}" IsReadOnly="True" Binding = "{Binding Kraj}"/>
+                            <DataGridCheckBoxColumn x:Name = "arrangementCancelled" Header = "{x:Static prop:Resources.arrangementCancelled}" IsReadOnly="False" Binding = "{Binding Otkazan}"/>
+                            <DataGridCheckBoxColumn x:Name = "arrangementFinished" Header = "{x:Static prop:Resources.arrangementFinished}" IsReadOnly="False" Binding = "{Binding Zavrsen}"/>
+                            <DataGridTextColumn x:Name = "arrangementRoomID" Header = "{x:Static prop:Resources.arrangementRoomID}" IsReadOnly="True" Binding = "{Binding SobaID}"/>
+                            <DataGridTextColumn x:Name = "arrangementPrice" Header = "{x:Static prop:Resources.arrangementPrice}" IsReadOnly="True" Binding = "{Binding CijenaNocenja}"/>
+                            <DataGridTextColumn x:Name = "arrangementNights" Header = "{x:Static prop:Resources.arrangementNights}" IsReadOnly="True" Binding = "{Binding UkupnoNocenja}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <Button x:Name="addButton" Panel.ZIndex="10" Content="{x:Static prop:Resources.buttonAdd}" Margin="324,175,2,145" Click="AddClick"/>
+                    <Button x:Name="deleteButton" Panel.ZIndex="10" Content="{x:Static prop:Resources.buttonDelete}" Margin="324,225,2,95" Click="DeleteClick"/>
+                    <Button x:Name="updateButton" Panel.ZIndex="10" Content="{x:Static prop:Resources.buttonUpdate}" Margin="324,275,2,45" Click="UpdateClick"/>
+                    <TextBlock Panel.ZIndex="-10" x:Name="resultTextBlock" Text="" Margin="324,330,2,0" TextWrapping="Wrap"/>
+
+                    <TextBlock x:Name="arrangementStartInput" Text="{x:Static prop:Resources.arrangementStartInput}" Margin="10,165,0,5" Grid.ColumnSpan="2"/>
+                    <TextBlock x:Name="arrangementEndInput" Text="{x:Static prop:Resources.arrangementEndInput}" Margin="10,193,0,5" Grid.ColumnSpan="2"/>
+                    <TextBlock x:Name="arrangementCancelledInput" Text="{x:Static prop:Resources.arrangementCancelledInput}" Margin="10,221,0,5" Grid.ColumnSpan="2"/>
+                    <TextBlock x:Name="arrangementFinishedInput" Text="{x:Static prop:Resources.arrangementFinishedInput}" Margin="10,247,0,5" Grid.ColumnSpan="2"/>
+                    <TextBlock x:Name="arrangementHotelInput" Text="{x:Static prop:Resources.arrangementHotelInput}" Margin="10,278,0,5" Grid.ColumnSpan="2"/>
+                    <TextBlock x:Name="arrangementGuestInput" Text="{x:Static prop:Resources.arrangementGuestInput}" Margin="10,307,0,5" Grid.ColumnSpan="2"/>
+                    <TextBlock x:Name="arrangementRoomInput" Text="{x:Static prop:Resources.arrangementRoomInput}" Margin="10,336,0,5" Grid.ColumnSpan="2"/>
+                    <DatePicker x:Name="noviAranzmanPocetak" Margin="70,160,300,175" Grid.ColumnSpan="2"/>
+                    <DatePicker x:Name="noviAranzmanKraj" Margin="70,190,300,145" Grid.ColumnSpan="2"/>
+                    <CheckBox Margin="70,224,300,105" x:Name="noviAranzmanJeOtkazan" Grid.ColumnSpan="2"/>
+                    <CheckBox Margin="70,249,300,85" x:Name="noviAranzmanJeZavrsen" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="hotelsComboBox" Margin="70,273,300,64" Grid.ColumnSpan="2" SelectionChanged="HotelSelectionChanged"/>
+                    <ComboBox x:Name="guestComboBox"  Margin="70,303,300,34" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="roomComboBox" Margin="70,333,300,4" Grid.ColumnSpan="2" />
+                </Grid>
+            </TabItem>
+
+            <TabItem x:Name="sobeTab" Header="{x:Static prop:Resources.tabRooms}">
+                <Grid>
+                    <DataGrid Name="sobeDataGrid" AlternatingRowBackground = "#e0f7fa"  
+                     AlternationCount = "2" AutoGenerateColumns = "False" Margin="0,0,0,201">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn x:Name="roomsRoomID" Header = "{x:Static prop:Resources.roomsRoomID}" IsReadOnly="True" Binding = "{Binding SobaID}"/>
+                            <DataGridTextColumn x:Name="roomsHotel" Header = "{x:Static prop:Resources.roomsHotel}" IsReadOnly="True" Binding = "{Binding HotelID}"/>
+                            <DataGridTextColumn x:Name="roomsFloor" Header = "{x:Static prop:Resources.roomsFloor}" IsReadOnly="False" Binding = "{Binding BrojSprata}"/>
+                            <DataGridTextColumn x:Name="roomsRoomNumber" Header = "{x:Static prop:Resources.roomsRoomNumber}" IsReadOnly="False" Binding = "{Binding BrojSobe}"/>
+                            <DataGridTextColumn x:Name="roomsNumberOfBeds" Header = "{x:Static prop:Resources.roomsNumberOfBeds}" IsReadOnly="False" Binding = "{Binding BrojKreveta}"/>
+                            <DataGridCheckBoxColumn x:Name="roomsHasTV" Header = "{x:Static prop:Resources.roomsHasTV}" IsReadOnly="False" Binding = "{Binding ImaTV}"/>
+                            <DataGridCheckBoxColumn x:Name="roomsHasAC" Header = "{x:Static prop:Resources.roomsHasAC}" IsReadOnly="False" Binding = "{Binding ImaKlimu}"/>
+                            <DataGridTextColumn x:Name="roomsPrice" Header = "{x:Static prop:Resources.roomsPrice}" IsReadOnly="False" Binding = "{Binding CijenaNocenja}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <TextBlock x:Name="roomsHotelInput" Text="{x:Static prop:Resources.roomsHotelInput}" Margin="10,175,0,5"/>
+                    <TextBlock x:Name="roomsFloorInput" Text="{x:Static prop:Resources.roomsFloorInput}" Margin="10,200,0,5"/>
+                    <TextBlock x:Name="roomsRoomNumberInput" Text="{x:Static prop:Resources.roomsRoomNumberInput}" Margin="10,225,0,5"/>
+                    <TextBlock x:Name="roomsNumberOfBedsInput" Text="{x:Static prop:Resources.roomsNumberOfBedsInput}" Margin="10,250,0,5"/>
+                    <TextBlock x:Name="roomsHasTVInput" Text="{x:Static prop:Resources.roomsHasTVInput}" Margin="10,275,0,5"/>
+                    <TextBlock x:Name="roomsHasACInput" Text="{x:Static prop:Resources.roomsHasACInput}" Margin="10,300,0,5"/>
+                    <TextBlock x:Name="roomsPriceInput" Text="{x:Static prop:Resources.roomsPriceInput}" Margin="10,325,0,5"/>
+
+                    <ComboBox x:Name="novaSobaHotel" Margin="100,175,270,165" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="novaSobaBrojSprata" Margin="100,200,270,140" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="novaSobaBrojSobe" Margin="100,225,270,115" Grid.ColumnSpan="2"/>
+                    <TextBox Margin="100,250,270,90" x:Name="novaSobaBrojKreveta" Grid.ColumnSpan="2"/>
+                    <CheckBox Margin="100,278,270,65" x:Name="NovaSobaImaTV" Grid.ColumnSpan="2"/>
+                    <CheckBox x:Name="novaSobaImaKlimu" Margin="100,303,270,40" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="novaSobaCijenaNocenja"  Margin="100,325,270,15" Grid.ColumnSpan="2"/>
+
+                    <Button x:Name="addButtonSobe" Panel.ZIndex="10" Content="{x:Static prop:Resources.buttonAdd}" Margin="324,175,2,145" Click="AddClickSobe"/>
+                    <Button x:Name="deleteButtonSobe" Panel.ZIndex="10" Content="{x:Static prop:Resources.buttonDelete}" Margin="324,225,2,95" Click="DeleteClickSobe"/>
+                    <Button x:Name="updateButtonSobe" Panel.ZIndex="10" Content="{x:Static prop:Resources.buttonUpdate}" Margin="324,275,2,45" Click="UpdateClickSobe"/>
+                    <TextBlock Panel.ZIndex="-10" x:Name="rezultatSobe" Text="" Margin="324,330,2,0" TextWrapping="Wrap"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem x:Name="gostiTab" Header="{x:Static prop:Resources.guestsTab}">
+                <Grid>
+                    <DataGrid Name="gostiDataGrid" AlternatingRowBackground = "#e0f7fa"  
+                     AlternationCount = "2" AutoGenerateColumns = "False" Margin="0,0,0,201">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn x:Name="guestsGuestID" Header = "{x:Static prop:Resources.guestsGuestID}" IsReadOnly="True" Binding = "{Binding GostID}"/>
+                            <DataGridTextColumn x:Name="guestsJMBG" Header = "{x:Static prop:Resources.guestsJMBG}" IsReadOnly="False" Binding = "{Binding JMBG}"/>
+                            <DataGridTextColumn x:Name="guestsName" Header = "{x:Static prop:Resources.guestsName}" IsReadOnly="False" Binding = "{Binding Ime}"/>
+                            <DataGridTextColumn x:Name="guestsSurname" Header = "{x:Static prop:Resources.guestsSurname}" IsReadOnly="False" Binding = "{Binding Prezime}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <TextBlock x:Name="guestsJMBGInput" Text="{x:Static prop:Resources.guestsJMBGInput}" Margin="10,205,0,5"/>
+                    <TextBlock x:Name="guestsNameInput" Text="{x:Static prop:Resources.guestsNameInput}" Margin="10,230,0,5"/>
+                    <TextBlock x:Name="guestsSurnameInput" Text="{x:Static prop:Resources.guestsSurnameInput}" Margin="10,255,0,5"/>
+
+                    <TextBox x:Name="noviGostJMBG" Margin="100,205,270,135" Grid.ColumnSpan="2"/>
+                    <TextBox Margin="100,230,270,110" x:Name="noviGostIme" Grid.ColumnSpan="2"/>
+                    <TextBox Margin="100,255,270,85" x:Name="noviGostPrezime" Grid.ColumnSpan="2"/>
+
+                    <Button x:Name="addButtonGost" Panel.ZIndex="10" Content="{x:Static prop:Resources.buttonAdd}" Margin="324,175,2,145" Click="AddClickGost"/>
+                    <Button x:Name="deleteButtonGost" Panel.ZIndex="10" Content="{x:Static prop:Resources.buttonDelete}" Margin="324,225,2,95" Click="DeleteClickGost"/>
+                    <Button x:Name="updateButtonSobeGost" Panel.ZIndex="10" Content="{x:Static prop:Resources.buttonUpdate}" Margin="324,275,2,45" Click="UpdateClickGost"/>
+                    <TextBlock Panel.ZIndex="-10" x:Name="rezultatGost" Text="" Margin="324,330,2,0" TextWrapping="Wrap"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem x:Name="hoteliTab" Header="{x:Static prop:Resources.tabHotels}">
+                <Grid>
+                    <DataGrid Name="hotelDataGrid" AlternatingRowBackground = "#e0f7fa" Margin="0,0,0,215"  
+                     AlternationCount = "2" AutoGenerateColumns = "False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn x:Name="hotelsHotel" Header = "{x:Static prop:Resources.hotelsHotel}" IsReadOnly="False" Binding = "{Binding Ime}"/>
+                            <DataGridTextColumn x:Name="hotelsStars" Header = "{x:Static prop:Resources.hotelsStars}" IsReadOnly="False" Binding = "{Binding BrojZvjezdica}"/>
+                            <DataGridTextColumn x:Name="hotelsStreet" Header = "{x:Static prop:Resources.hotelsStreet}" IsReadOnly="False" Binding = "{Binding Ulica}"/>
+                            <DataGridTextColumn x:Name="hotelsNumber" Header = "{x:Static prop:Resources.hotelsNumber}" IsReadOnly="False" Binding = "{Binding Broj}"/>
+                            <DataGridTextColumn x:Name="hotelsCity" Header = "{x:Static prop:Resources.hotelsCity}" IsReadOnly="False" Binding = "{Binding Grad}"/>
+                            <DataGridTextColumn x:Name="hotelsZIP" Header = "{x:Static prop:Resources.hotelsZIP}" IsReadOnly="False" Binding = "{Binding PostanskiBroj}"/>
+                            <DataGridTextColumn x:Name="hotelsCountry" Header = "{x:Static prop:Resources.hotelsCountry}" IsReadOnly="False" Binding = "{Binding Drzava}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <TextBlock x:Name="hotelsNameInput" Text="{x:Static prop:Resources.hotelsNameInput}" Margin="10,155,0,5"/>
+                    <TextBlock x:Name="hotelsStarsInput" Text="{x:Static prop:Resources.hotelsStarsInput}" Margin="10,180,0,5"/>
+                    <TextBlock x:Name="hotelsContactInput" Text="{x:Static prop:Resources.hotelsContactInput}" Margin="10,205,0,5"/>
+                    <TextBlock x:Name="hotelsStreetInput" Text="{x:Static prop:Resources.hotelsStreetInput}" Margin="10,230,0,5"/>
+                    <TextBlock x:Name="hotelsNumberInput" Text="{x:Static prop:Resources.hotelsNumberInput}" Margin="10,255,0,5"/>
+                    <TextBlock x:Name="hotelsCityInput" Text="{x:Static prop:Resources.hotelsCityInput}" Margin="10,280,0,5"/>
+                    <TextBlock x:Name="hotelsZIPInput" Text="{x:Static prop:Resources.hotelsZIPInput}" Margin="10,305,0,5"/>
+                    <TextBlock x:Name="hotelsCountryInput" Text="{x:Static prop:Resources.hotelsCountryInput}" Margin="10,330,0,5"/>
+
+                    <TextBox x:Name="noviHotelIme" Margin="70,155,300,185" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="noviHotelZvjezdice" Margin="70,180,300,160" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="noviHotelKontakt" Margin="70,205,300,135" Grid.ColumnSpan="2"/>
+                    <TextBox Margin="70,230,300,110" x:Name="noviHotelUlica" Grid.ColumnSpan="2"/>
+                    <TextBox Margin="70,255,300,85" x:Name="noviHotelBroj" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="noviHotelGrad" Margin="70,280,300,60" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="noviHotelZIP"  Margin="70,305,300,35" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="noviHotelDrzava" Margin="70,330,300,10" Grid.ColumnSpan="2" />
+
+                    <Button x:Name="addButtonHotel" Panel.ZIndex="10" Content="{x:Static prop:Resources.buttonAdd}" Margin="324,175,2,145" Click="AddClickHotel"/>
+                    <Button x:Name="deleteButtonHotel" Panel.ZIndex="10" Content="{x:Static prop:Resources.buttonDelete}" Margin="324,225,2,95" Click="DeleteClickHotel"/>
+                    <Button x:Name="updateButtonHotel" Panel.ZIndex="10" Content="{x:Static prop:Resources.buttonUpdate}" Margin="324,275,2,45" Click="UpdateClickHotel"/>
+                    <TextBlock Panel.ZIndex="-10" x:Name="rezultatHotel" Text="" Margin="324,330,2,0" TextWrapping="Wrap"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem x:Name="kontaktiTab" Header="{x:Static prop:Resources.tabContact}">
+                <Grid>
+                    <DataGrid Name="kontaktiDataGrid" AlternatingRowBackground = "#e0f7fa" Margin="0,0,0,181"  
+                     AlternationCount = "2" AutoGenerateColumns = "False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn x:Name="contactContactID" Header = "{x:Static prop:Resources.contactContactID}" IsReadOnly="True" Binding = "{Binding KontaktID}"/>
+                            <DataGridTextColumn x:Name="contactType" Header = "{x:Static prop:Resources.contactType}" IsReadOnly="False" Binding = "{Binding Tip}"/>
+                            <DataGridTextColumn x:Name="contactInfo" Header = "{x:Static prop:Resources.contactInfo}" IsReadOnly="False" Binding = "{Binding Info}"/>
+                            <DataGridTextColumn x:Name="contactHotelID" Header = "{x:Static prop:Resources.contactHotelID}" IsReadOnly="False" Binding = "{Binding HotelID}"/>
+                            <DataGridTextColumn x:Name="contactGuestID" Header = "{x:Static prop:Resources.contactGuestID}" IsReadOnly="False" Binding = "{Binding GostID}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <TextBlock x:Name="contactTypeInput" Text="{x:Static prop:Resources.contactTypeInput}" Margin="10,258,0,-21"/>
+                    <TextBlock x:Name="contactInfoInput" Text="{x:Static prop:Resources.contactInfoInput}" Margin="10,282,0,-21"/>
+
+                    <ComboBox x:Name="noviKontaktTip" Margin="70,256,300,84"/>
+                    <TextBox x:Name="noviKontaktInfo" Margin="70,281,300,59"/>
+
+                    <Button x:Name="dodajKontaktButton" Panel.ZIndex="10" Content="{x:Static prop:Resources.buttonAdd}" Margin="324,195,2,125" Click="AddClickContact"/>
+                    <Button x:Name="obrisiKontaktButton" Panel.ZIndex="10" Content="{x:Static prop:Resources.buttonDelete}" Margin="324,245,2,75" Click="DeleteClickContact"/>
+                    <Button x:Name="azurirajKontaktButton" Panel.ZIndex="10" Content="{x:Static prop:Resources.buttonUpdate}" Margin="324,295,2,25" Click="UpdateClickContact"/>
+                    <TextBlock Panel.ZIndex="-10" x:Name="rezultatTextKontakt" Text="" Margin="324,340,2,0" TextWrapping="Wrap"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem x:Name="finansijeTab" Header="{x:Static prop:Resources.financialTab}">
+                <DataGrid Name="finansijeDataGrid" AlternatingRowBackground = "#e0f7fa"  
+                 AlternationCount = "2" AutoGenerateColumns = "False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn x:Name="financialHotel" Header = "{x:Static prop:Resources.financialHotel}" IsReadOnly="True" Binding = "{Binding ImeHotela}"/>
+                        <DataGridTextColumn x:Name="financialTotalNights" Header = "{x:Static prop:Resources.financialTotalNights}" IsReadOnly="True" Binding = "{Binding UkupnoNocenja}"/>
+                        <DataGridTextColumn x:Name="financialTotalIncome" Header = "{x:Static prop:Resources.financialTotalIncome}" IsReadOnly="True" Binding = "{Binding UkupnaZarada}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+
+            <TabItem x:Name="korisniciTab" Header = "{x:Static prop:Resources.zaposleniTab}">
+                <Grid>
+                    <DataGrid Name="korisniciDataGrid" AlternatingRowBackground = "#e0f7fa" Margin="0,0,0,181"  
+                     AlternationCount = "2" AutoGenerateColumns = "False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn x:Name="korisnikIme" Header = "{x:Static prop:Resources.zaposleniUsername}" IsReadOnly="False" Binding = "{Binding KorisnickoIme}"/>
+                            <DataGridTextColumn x:Name="korisnikLozinka" Header = "{x:Static prop:Resources.zaposleniPassword}" IsReadOnly="False" Binding = "{Binding LozinkaCiph}"/>
+                            <DataGridCheckBoxColumn x:Name="korisnikMenadzer" Header = "{x:Static prop:Resources.zaposleniJeMenadzer}" IsReadOnly="False" Binding = "{Binding JeMenadzer}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <TextBlock x:Name="korisnikKorisnickoImeInput" Text="{x:Static prop:Resources.zaposleniUsernameInput}" Margin="10,243,0,-21"/>
+                    <TextBlock x:Name="korisnikPasswordInput" Text="{x:Static prop:Resources.zaposleniPasswordInput}" Margin="10,267,0,-21"/>
+                    <TextBlock x:Name="korisnikManagerInput" Text="{x:Static prop:Resources.zaposleniIsManagerInput}" Margin="10,292,0,-21"/>
+
+                    <TextBox x:Name="korisnikNoviIme" Margin="110,241,260,99"/>
+                    <PasswordBox x:Name="korisnikNoviPassword" Margin="110,266,260,74"/>
+                    <CheckBox x:Name="korisnikNoviManager" Margin="110,293,260,3"/>
+                    
+                    <Button x:Name="dodajKorisnikaButton" Panel.ZIndex="10" Content="{x:Static prop:Resources.buttonAdd}" Margin="324,195,2,125" Click="AddClickZaposleni"/>
+                    <Button x:Name="obrisiKorisnikaButton" Panel.ZIndex="10" Content="{x:Static prop:Resources.buttonDelete}" Margin="324,245,2,75" Click="DeleteClickZaposleni"/>
+                    <Button x:Name="azurirajKorisnikaButton" Panel.ZIndex="10" Content="{x:Static prop:Resources.buttonUpdate}" Margin="324,295,2,25" Click="UpdateClickZaposleni"/>
+                    <TextBlock Panel.ZIndex="-10" x:Name="rezultatTextZaposleni" Text="" Margin="324,340,2,0" TextWrapping="Wrap"/>
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+        <Button x:Name="logOutButton" Content="{x:Static prop:Resources.logOutButtonText}" Margin="30,393,550,30" Click="LogOut" />
+    </Grid>
+</Window>

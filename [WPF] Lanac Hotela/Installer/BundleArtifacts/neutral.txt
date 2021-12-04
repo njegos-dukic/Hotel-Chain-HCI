@@ -1,0 +1,5 @@
+MainPackage=C:\Users\njego\Desktop\HCI\2. 1104_17-Njegos_Dukic-LanacHotela\[WPF] Lanac Hotela\Installer\bin\AnyCPU\Debug\Installer_1.0.1.0_AnyCPU_Debug.msix
+ResourcePack=C:\Users\njego\Desktop\HCI\2. 1104_17-Njegos_Dukic-LanacHotela\[WPF] Lanac Hotela\Installer\bin\AnyCPU\Debug\Installer_1.0.1.0_scale-100.msix
+ResourcePack=C:\Users\njego\Desktop\HCI\2. 1104_17-Njegos_Dukic-LanacHotela\[WPF] Lanac Hotela\Installer\bin\AnyCPU\Debug\Installer_1.0.1.0_scale-125.msix
+ResourcePack=C:\Users\njego\Desktop\HCI\2. 1104_17-Njegos_Dukic-LanacHotela\[WPF] Lanac Hotela\Installer\bin\AnyCPU\Debug\Installer_1.0.1.0_scale-150.msix
+ResourcePack=C:\Users\njego\Desktop\HCI\2. 1104_17-Njegos_Dukic-LanacHotela\[WPF] Lanac Hotela\Installer\bin\AnyCPU\Debug\Installer_1.0.1.0_scale-400.msix

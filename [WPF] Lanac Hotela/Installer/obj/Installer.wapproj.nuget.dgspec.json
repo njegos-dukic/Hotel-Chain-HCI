@@ -1,0 +1,225 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\njego\\Desktop\\HCI\\Projekat_B-IS za Lanac Hotela\\[WPF] Lanac Hotela\\Installer\\Installer.wapproj": {}
+  },
+  "projects": {
+    "C:\\Users\\njego\\Desktop\\HCI\\Projekat_B-IS za Lanac Hotela\\[WPF] Lanac Hotela\\Installer\\Installer.wapproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\njego\\Desktop\\HCI\\Projekat_B-IS za Lanac Hotela\\[WPF] Lanac Hotela\\Installer\\Installer.wapproj",
+        "projectName": "Installer",
+        "projectPath": "C:\\Users\\njego\\Desktop\\HCI\\Projekat_B-IS za Lanac Hotela\\[WPF] Lanac Hotela\\Installer\\Installer.wapproj",
+        "packagesPath": "C:\\Users\\njego\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\njego\\Desktop\\HCI\\Projekat_B-IS za Lanac Hotela\\[WPF] Lanac Hotela\\Installer\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\njego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "uap10.0.17763"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "uap10.0.17763": {
+            "targetAlias": "net451",
+            "projectReferences": {
+              "C:\\Users\\njego\\Desktop\\HCI\\Projekat_B-IS za Lanac Hotela\\[WPF] Lanac Hotela\\LanacHotela\\LanacHotelaPresentation.csproj": {
+                "projectPath": "C:\\Users\\njego\\Desktop\\HCI\\Projekat_B-IS za Lanac Hotela\\[WPF] Lanac Hotela\\LanacHotela\\LanacHotelaPresentation.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "uap10.0.17763": {
+          "targetAlias": "net451",
+          "dependencies": {
+            "Microsoft.Windows.SDK.BuildTools": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.19041.8, )"
+            }
+          },
+          "imports": [
+            "netcoreapp3.1",
+            "netcoreapp3.0",
+            "netcoreapp2.0",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net5.0-windows10.0.17763",
+            "net6.0-windows10.0.17763",
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win10-arm": {
+          "#import": []
+        },
+        "win10-arm-aot": {
+          "#import": []
+        },
+        "win10-arm64-aot": {
+          "#import": []
+        },
+        "win10-x64": {
+          "#import": []
+        },
+        "win10-x64-aot": {
+          "#import": []
+        },
+        "win10-x86": {
+          "#import": []
+        },
+        "win10-x86-aot": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\njego\\Desktop\\HCI\\Projekat_B-IS za Lanac Hotela\\[WPF] Lanac Hotela\\LanacHotelaServiceLayer\\LanacHotelaServiceLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\njego\\Desktop\\HCI\\Projekat_B-IS za Lanac Hotela\\[WPF] Lanac Hotela\\LanacHotelaServiceLayer\\LanacHotelaServiceLayer.csproj",
+        "projectName": "LanacHotelaServiceLayer",
+        "projectPath": "C:\\Users\\njego\\Desktop\\HCI\\Projekat_B-IS za Lanac Hotela\\[WPF] Lanac Hotela\\LanacHotelaServiceLayer\\LanacHotelaServiceLayer.csproj",
+        "packagesPath": "C:\\Users\\njego\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\njego\\Desktop\\HCI\\Projekat_B-IS za Lanac Hotela\\[WPF] Lanac Hotela\\LanacHotelaServiceLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\njego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.25, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\njego\\Desktop\\HCI\\Projekat_B-IS za Lanac Hotela\\[WPF] Lanac Hotela\\LanacHotela\\LanacHotelaPresentation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\njego\\Desktop\\HCI\\Projekat_B-IS za Lanac Hotela\\[WPF] Lanac Hotela\\LanacHotela\\LanacHotelaPresentation.csproj",
+        "projectName": "LanacHotelaPresentation",
+        "projectPath": "C:\\Users\\njego\\Desktop\\HCI\\Projekat_B-IS za Lanac Hotela\\[WPF] Lanac Hotela\\LanacHotela\\LanacHotelaPresentation.csproj",
+        "packagesPath": "C:\\Users\\njego\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\njego\\Desktop\\HCI\\Projekat_B-IS za Lanac Hotela\\[WPF] Lanac Hotela\\LanacHotela\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\njego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\njego\\Desktop\\HCI\\Projekat_B-IS za Lanac Hotela\\[WPF] Lanac Hotela\\LanacHotelaServiceLayer\\LanacHotelaServiceLayer.csproj": {
+                "projectPath": "C:\\Users\\njego\\Desktop\\HCI\\Projekat_B-IS za Lanac Hotela\\[WPF] Lanac Hotela\\LanacHotelaServiceLayer\\LanacHotelaServiceLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

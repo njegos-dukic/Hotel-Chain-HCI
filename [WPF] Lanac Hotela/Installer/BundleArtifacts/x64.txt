@@ -1,0 +1,5 @@
+MainPackage=C:\Users\njego\Desktop\HCI\Projekat_B-IS za Lanac Hotela\[WPF] Lanac Hotela\Installer\bin\x64\Release\Installer_1.0.13.0_x64.msix
+ResourcePack=C:\Users\njego\Desktop\HCI\Projekat_B-IS za Lanac Hotela\[WPF] Lanac Hotela\Installer\bin\x64\Release\Installer_1.0.13.0_scale-100.msix
+ResourcePack=C:\Users\njego\Desktop\HCI\Projekat_B-IS za Lanac Hotela\[WPF] Lanac Hotela\Installer\bin\x64\Release\Installer_1.0.13.0_scale-125.msix
+ResourcePack=C:\Users\njego\Desktop\HCI\Projekat_B-IS za Lanac Hotela\[WPF] Lanac Hotela\Installer\bin\x64\Release\Installer_1.0.13.0_scale-150.msix
+ResourcePack=C:\Users\njego\Desktop\HCI\Projekat_B-IS za Lanac Hotela\[WPF] Lanac Hotela\Installer\bin\x64\Release\Installer_1.0.13.0_scale-400.msix
